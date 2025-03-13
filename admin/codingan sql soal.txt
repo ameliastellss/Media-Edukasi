@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 05, 2018 at 03:39 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_quest`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `soal_aljabar`
+--
+
+CREATE TABLE `soal_aljabar` (
+  `id_soal` int(11) NOT NULL,
+  `soal` text NOT NULL,
+  `a` varchar(50) NOT NULL,
+  `b` varchar(50) NOT NULL,
+  `c` varchar(50) NOT NULL,
+  `d` varchar(50) NOT NULL,
+  `kunci` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  `aktif` enum('Y','N') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `soal_aljabar`
+--
+
+INSERT INTO `soal_aljabar` (`id_soal`, `soal`, `a`, `b`, `c`, `d`, `kunci`, `gambar`, `tanggal`, `aktif`) VALUES
+(1, 'Hasil penjumlahan dari -3a –6b + 7 dan 13a – (-2b) + 4 adalah ...', ' 16a -8b + 11', '10a + 4b + 11', '10a -4b + 11', ' -16a -4b + 11', 'c', '', '2018-07-02', 'Y'),
+(2, 'Hasil perkalian dari (4x - 5)(3x + 3) adalah ....', ' 12x² -3x - 15', '12x² +3x - 15', '12x² -27x - 15', '12x² -27x - 15', 'a', '', '2018-07-02', 'Y'),
+(3, 'Bentuk -6x² – x + 4y variabel-variabelnya adalah ....', '-6, -1 dan 4', 'x² , x dan y', 'x + y', ' x² – 4y', 'b', '', '2018-07-18', 'Y'),
+(4, 'Pada bentuk aljabar x² – 2x – 5 koefisien-koefisiennya adalah ....', 'x²', '-2', '- 2x dan - 5', ' -2 dan -5', 'b', '', '2018-07-02', 'Y'),
+(5, 'Diketahui bentuk aljabar 3a² -7a -9, suku yang merupakan konstanta saja adalah ....', '3a²', 'a', '-7', '-9', 'd', '', '2018-07-02', 'Y'),
+(6, ' 8p + 5q dikurangkan dengan 2p – 4q maka hasilnya adalah ....', ' 6p - q', '6p + 9q', '-6p + q', '-6p – 9q', 'b', '', '2018-07-02', 'N');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `soal_aljabar`
+--
+ALTER TABLE `soal_aljabar`
+  ADD PRIMARY KEY (`id_soal`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `soal_aljabar`
+--
+ALTER TABLE `soal_aljabar`
+  MODIFY `id_soal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

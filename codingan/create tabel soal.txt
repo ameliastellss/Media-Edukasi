@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 06, 2020 at 09:13 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_edukasi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `soal_ide`
+--
+
+CREATE TABLE `soal_ide` (
+  `id_soal` int(11) NOT NULL,
+  `soal` text NOT NULL,
+  `A` varchar(50) NOT NULL,
+  `B` varchar(50) NOT NULL,
+  `C` varchar(50) NOT NULL,
+  `D` varchar(50) NOT NULL,
+  `kunci` varchar(50) NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  `aktif` enum('Y','N') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `soal_ide`
+--
+
+INSERT INTO `soal_ide` (`id_soal`, `soal`, `A`, `B`, `C`, `D`, `kunci`, `gambar`, `tanggal`, `aktif`) VALUES
+(1, 'Bacalah paragraf berikut!<br></br>
+Dengan sumber daya alam yang semakin terbatas dan jumlah penduduk bumi yang terus berkembang pesat, sudah saatnya inovasi untuk menekan penggunaan sumber daya alam melalui teknologi ramah lingkungan dapat diterapkan di masyarakat. Salah satu contohnya adalah biotoilet. Tidak hanya berhenti pada proses penelitian, sekarang telah dikembangkan biotoilet yang merupakan desain toilet sistem kering mempergunakan matriks serbuk kayu sebagai media penangkap dan pengurai tinja dan urine. Tidak hanya itu, limbah dapur sisa makanan juga bisa dioleh di sini untuk dijadikan kompos.<br></br>
+Ide pokok paragraf pertama bacaan di atas adalah ….', 'Manfaat penggunaan biotoilet', 'penelitian mengenai biotoilet', 'penerapan teknologi ramah lingkungan', 'pengembangan teknologi modern', 'C', '', '2018-07-02', 'Y'),
+(2, 'Bacalah paragraf berikut!<br></br>
+Rendahnya kualitas pendidikan kita sangat dipengaruhi oleh kualitas tenaga pendidik yang ada dan juga tingkat penguasaan teknologi informasi yang kurang memadai. Guru harus berperan sebagai mediator dan fasilitator dalam mentransfer ilmu kepada peserta didik, guru harus menjadi pembina akhlak dan budi pekerti mulia kepada siswa sejak dini dan guru harus menjadi teladan yang baik bagi peserta didik. Dari beberapa hasil penelitian selama ini sebagian besar guru masih bertindak sebatas mengajar saja, sedang fungsi mendidik, melatih, memberi nasehat yang baik, dan juga sebagai konsultan bagi peserta didik terabaikan.<br></br>
+Ide pokok paragraf di atas adalah ….', 'Rendahnya kualitas Pendidikan dipengaruhi oleh teknologi informasi', 'Cara meningkatkan kualitas pendidikan melalui penguasaan teknologi informasi', 'Guru menjadi teladan yang baik untuk meningkatkan kualitas pendidikan', 'Kualitas pendidikan dipengaruhi kualitas tenaga pendidik', 'D', '', '2018-07-02', 'Y'),
+(3, 'Bahan bakar minyak memiliki berbagai kegunaan. Sepeda motor menggunakan bahan bakar pertalite. Kendaraan bermesin diesel menggunakan bahan bakar solar. Pesawat terbang menggunakan avtur sebagai bahan bakar. Ibu rumah tangga menggunakan minyak tanah sebagai bahan bakar kompor minyak.<br></br>
+Ide pokok paragraf tersebut adalah ….', 'kegunaan bahan bakar minyak', 'berbagai jenis kendaraan', 'bahan bakar rumah tangga', 'manfaat pertalite dan minyak tanah', 'A', '', '2018-07-18', 'Y'),
+(4, 'Kecelakaan lalu lintas di jalan raya disebabkan oleh berbagai hal. Banyak pemakai jalan raya tidak menaati peraturan lalu lintas. Misalnya kebut-kebutan, melanggar lampu rambu-rambu lalu lintas, dan mau menang sendiri. Selain itu, banyak kendaraan yang tidak dilengkapi spion. Jika semua pemakai jalan raya taat peraturan, maka kecelakaan lalu lintas dapat berkurang.<br></br>Ide pokok paragraf tersebut adalah ….', 'ketaatan berlalu lintas di jalan raya', ' kesadaran berlalu lintas di jalan raya', 'penyebab kecelakaan di jalan raya', 'mengurangi kecelakaan di jalan raya', 'C', '', '2018-07-02', 'Y'),
+(5, 'Pasokan listrik pada musim penghujan sering terganggu. Hujan lebat dan angin ribut dapat menyebabkan pohon-pohon di beberapa ruas jalan tumbang dan menimpa kabel listrik. Untuk mempercepat perbaikan jaringan listrik. PLN melakukan pemadaman listrik sementara.<br></br>Ide pokok paragraf tersebut adalah ….', 'pengaruh hujan terhadap pasokan listrik', 'pemadaman listrik sementara oleh PLN', 'rusaknya alat listrik karena hujan dan angin', 'gangguan pasokan listrik pada musim penghujan', 'A', '', '2018-07-02', 'Y'),
+(6, 'Sampah plastik sulit terurai di tanah. Apabila dibakar dapat menimbulkan pencemaran dan gangguan pernapasan. Selain itu sampah plastik dapat mencemari lingkungan. Itulah beberapa bahaya yang disebabkan dari sampah plastik.<br></br>Ide pokok paragraf tersebut adalah ….', 'kantong plastik sulit terurai', 'penyebab pencemaran udara', 'plastik mencemari lingkungan', 'beberapa bahaya sampah plastik', 'D', '', '2018-07-02', 'Y'),
+(7, 'Saat berbelanja kita menggunakan kantong kain. Selain kantong kain, kita juga dapat menggunakan keranjang belanja. Kantong plastik bekas juga dapat kita gunakan kembali saat berbelanja. Itulah beberapa cara untuk mengurangi sampah plastik.<br></br> Ide pokok paragraf tersebut adalah ….', 'penggunaan kantong belanja', 'cara mengurangi sampah plastik', 'penggunaan sampah plastik', 'manfaat sampah plastik', 'B', '', '2020-10-04', 'Y');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `soal_ide`
+--
+ALTER TABLE `soal_ide`
+  ADD PRIMARY KEY (`id_soal`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `soal_ide`
+--
+ALTER TABLE `soal_ide`
+  MODIFY `id_soal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
